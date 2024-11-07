@@ -30,6 +30,7 @@ jobs:
             # Si no es un repositorio Git, clonamos el repositorio
             git clone https://github.com/JuanR200419/ramirez_garces_said_monolitica.git /home/ubuntu/ramirez_garces_said_monolitica;
           fi
+          cd /home/ubuntu/ramirez_garces_said_monolitica &&
           docker compose build
           docker compose up -d
           '
