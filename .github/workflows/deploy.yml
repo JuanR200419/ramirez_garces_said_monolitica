@@ -26,8 +26,10 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key.pem ${USER_NAME}@${HOST_NAME} '
 
           # Verificamos si el directorio es un repositorio Git
-          if [ ! -d "/home/ubuntu/ramirez_velasquez/.git" ]; then
+          if [ ! -d "/home/ubuntu/ramirez_garces_said_monolitica/.git" ]; then
             # Si no es un repositorio Git, clonamos el repositorio
-            git clone https://github.com/JuanR200419/ramirez_velasquez.git /home/ubuntu/ramirez_velasquez;
+            git clone https://github.com/JuanR200419/ramirez_garces_said_monolitica.git /home/ubuntu/ramirez_garces_said_monolitica;
           fi
+          docker compose build
+          docker compose up -d
           '

@@ -21,7 +21,7 @@ services:
     volumes:
       - ./MySQL/mysql_data:/var/lib/mysql
     ports:
-      - "8008:3306"
+      - "3309:3306"
     networks:
       - app-network
     healthcheck:
@@ -36,7 +36,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - "8007:8080"
+      - "8084:8080"
     networks:
       - app-network
 #  --------------------------------------------
